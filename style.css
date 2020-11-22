@@ -53,29 +53,29 @@
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-dl,
-dd {
+.latex-body body,
+.latex-body h1,
+.latex-body h2,
+.latex-body h3,
+.latex-body h4,
+.latex-body p,
+.latex-body ul[class],
+.latex-body ol[class],
+.latex-body li,
+.latex-body figure,
+.latex-body figcaption,
+.latex-body dl,
+.latex-body dd {
   margin: 0;
 }
 
 /* Make default font-size 1rem and add smooth scrolling to anchors */
-html {
+/* html {
   font-size: 1rem;
   scroll-behavior: smooth;
-}
+} */
 
-body {
+.latex-body {
   font-family: 'Latin Modern', Georgia, Cambria, 'Times New Roman', Times, serif;
   line-height: 1.8;
 
@@ -96,7 +96,7 @@ body {
 }
 
 /* Justify and hyphenate all paragraphs */
-p {
+.latex-body p {
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
@@ -105,66 +105,66 @@ p {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+.latex-body a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
 /* Make links red */
-a,
-a:visited {
+.latex-body a,
+.latex-body a:visited {
   color: #a00;
 }
 
-a:focus {
+.latex-body a:focus {
   outline-offset: 2px;
   outline: 2px solid hsl(220, 90%, 52%);
 }
 
 /* Make images easier to work with */
-img {
+.latex-body img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
+.latex-body input,
+.latex-body button,
+.latex-body textarea,
+.latex-body select {
   font: inherit;
 }
 
 /* Prevent textarea from overflowing */
-textarea {
+.latex-body textarea {
   width: 100%;
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+.latex-body article > * + * {
   margin-top: 1em;
 }
 
 /* Styles for inline code or code snippets */
-code,
-pre,
-kbd {
+.latex-body code,
+.latex-body pre,
+.latex-body kbd {
   font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
   font-size: 85%;
 }
-pre {
+.latex-body pre {
   padding: 1rem 1.4rem;
   max-width: 100%;
   overflow: auto;
   border-radius: 4px;
   background: hsl(210, 28%, 93%);
 }
-pre code {
+.latex-body pre code {
   font-size: 95%;
   position: relative;
 }
-kbd {
+.latex-body kbd {
   background: hsl(210, 5%, 100%);
   border: 1px solid hsl(210, 5%, 70%);
   border-radius: 2px;
@@ -173,7 +173,7 @@ kbd {
 }
 
 /* Better tables */
-table {
+.latex-body table {
   border-collapse: collapse;
   border-spacing: 0;
   width: auto;
@@ -186,30 +186,30 @@ table {
   counter-increment: caption;
 }
 /* add bottom border on column table headings  */
-table tr > th[scope='col'] {
+.latex-body table tr > th[scope='col'] {
   border-bottom: 1.36px solid black;
 }
 /* add right border on row table headings  */
-table tr > th[scope='row'] {
+.latex-body table tr > th[scope='row'] {
   border-right: 1.36px solid black;
 }
-table > tbody > tr:first-child > td,
-table > tbody > tr:first-child > th {
+.latex-body table > tbody > tr:first-child > td,
+.latex-body table > tbody > tr:first-child > th {
   border-top: 1.36px solid black;
 }
-table > tbody > tr:last-child > td,
-table > tbody > tr:last-child > th {
+.latex-body table > tbody > tr:last-child > td,
+.latex-body table > tbody > tr:last-child > th {
   border-bottom: 1.36px solid black;
 }
 
-th,
-td {
+.latex-body th,
+.latex-body td {
   text-align: left;
   padding: 0.5rem;
   line-height: 1.1;
 }
 /* Table caption */
-caption {
+.latex-body caption {
   text-align: left;
   font-size: 0.923em;
   /* border-bottom: 2pt solid #000; */
@@ -218,84 +218,84 @@ caption {
   margin-left: 0;
 }
 
-caption::before {
+.latex-body caption::before {
   content: 'Table ' counter(caption) '. ';
   font-weight: bold;
 }
 
 /* allow scroll on the x-axis */
-.scroll-wrapper {
+.latex-body .scroll-wrapper {
   overflow-x: auto;
 }
 
 /* if a table is wrapped in a scroll wrapper,
   the table cells shouldn't wrap */
-.scroll-wrapper > table td {
+.latex-body .scroll-wrapper > table td {
   white-space: nowrap;
 }
 
 /* Center align the title */
-h1:first-child {
+.latex-body h1:first-child {
   text-align: center;
 }
 
 /* Nested ordered list for ToC */
-nav ol {
+.latex-body nav ol {
   counter-reset: item;
   padding-left: 2rem;
 }
-nav li {
+.latex-body nav li {
   display: block;
 }
-nav li:before {
+.latex-body nav li:before {
   content: counters(item, '.') ' ';
   counter-increment: item;
   padding-right: 0.85rem;
 }
 
 /* Center definitions (most useful for display equations) */
-dl dd {
+.latex-body dl dd {
   text-align: center;
 }
 
 /* Theorem */
-.theorem {
+.latex-body .theorem {
   counter-increment: theorem;
   display: block;
   margin: 12px 0;
   font-style: italic;
 }
-.theorem::before {
+.latex-body .theorem::before {
   content: 'Theorem ' counter(theorem) '. ';
   font-weight: bold;
   font-style: normal;
 }
 
 /* Lemma */
-.lemma {
+.latex-body .lemma {
   counter-increment: theorem;
   display: block;
   margin: 12px 0;
   font-style: italic;
 }
-.lemma::before {
+.latex-body .lemma::before {
   content: 'Lemma ' counter(theorem) '. ';
   font-weight: bold;
   font-style: normal;
 }
 
 /* Proof */
-.proof {
+.latex-body .proof {
   display: block;
   margin: 12px 0;
   font-style: normal;
   position: relative;
 }
-.proof::before {
+.latex-body .proof::before {
   content: 'Proof. ' attr(title);
   font-style: italic;
 }
-.proof:after {
+.latex-body .proof:after {
   content: '◾️';
   position: absolute;
   right: -12px;
@@ -303,20 +303,20 @@ dl dd {
 }
 
 /* Definition */
-.definition {
+.latex-body .definition {
   counter-increment: definition;
   display: block;
   margin: 12px 0;
   font-style: normal;
 }
-.definition::before {
+.latex-body .definition::before {
   content: 'Definition ' counter(definition) '. ';
   font-weight: bold;
   font-style: normal;
 }
 
 /* Center align author name, use small caps and add vertical spacing  */
-.author {
+.latex-body .author {
   margin: 0.85rem 0;
   font-variant-caps: small-caps;
   text-align: center;
@@ -324,7 +324,7 @@ dl dd {
 
 /* Sidenotes */
 
-.sidenote {
+.latex-body .sidenote {
   font-size: 0.8rem;
   float: right;
   clear: right;
@@ -333,32 +333,32 @@ dl dd {
   margin-bottom: 1em;
 }
 
-.sidenote.left {
+.latex-body .sidenote.left {
   float: left;
   margin-left: -20vw;
   margin-bottom: 1em;
 }
 
 /* (WIP) add border when a sidenote is clicked on */
-.sidenote:target {
+.latex-body .sidenote:target {
   border: hsl(55, 55%, 70%) 1.5px solid;
   padding: 0 .5rem;
   scroll-margin-block-start: 10rem;
 }
 
 /* sidenote counter */
-.sidenote-number {
+.latex-body .sidenote-number {
   counter-increment: sidenote-counter;
 }
 
-.sidenote-number::after,
-.sidenote::before {
+.latex-body .sidenote-number::after,
+.latex-body .sidenote::before {
   position: relative;
   vertical-align: baseline;
 }
 
 /* add number in main content */
-.sidenote-number::after {
+.latex-body .sidenote-number::after {
   content: counter(sidenote-counter);
   font-size: 0.7rem;
   top: -0.5rem;
@@ -366,40 +366,40 @@ dl dd {
 }
 
 /* add number in front of the sidenote */
-.sidenote-number ~ .sidenote::before {
+.latex-body .sidenote-number ~ .sidenote::before {
   content: counter(sidenote-counter) ' ';
   font-size: 0.7rem;
   top: -0.5rem;
 }
 
-label.sidenote-toggle:not(.sidenote-number) {
+.latex-body label.sidenote-toggle:not(.sidenote-number) {
   display: none;
 }
 
 /* sidenotes inside blockquotes are indented more */
-blockquote .sidenote {
+.latex-body blockquote .sidenote {
   margin-right: -24vw;
   width: 18vw;
 }
 
 
-label.sidenote-toggle {
+.latex-body label.sidenote-toggle {
   display: inline;
   cursor: pointer;
 }
 
-input.sidenote-toggle {
+.latex-body input.sidenote-toggle {
   display: none;
 }
 
 @media (max-width: 1050px) {
-  label.sidenote-toggle:not(.sidenote-number) {
+  .latex-body label.sidenote-toggle:not(.sidenote-number) {
     display: inline;
   }
-  .sidenote {
+  .latex-body .sidenote {
     display: none;
   }
-  .sidenote-toggle:checked + .sidenote {
+  .latex-body .sidenote-toggle:checked + .sidenote {
     display: block;
     margin: 0.5rem 1.25rem 1rem 0.5rem;
     float: left;
@@ -408,39 +408,39 @@ input.sidenote-toggle {
     width: 95%;
   }
   /* tweak indentation of sidenote inside a blockquote */
-  blockquote .sidenote {
+  .latex-body blockquote .sidenote {
     margin-right: -25vw;
     width: 16vw;
   }
 }
 
 /* Make footnote text smaller and left align it (looks bad with long URLs) */
-.footnotes p {
+.latex-body .footnotes p {
   text-align: left;
   line-height: 1.5;
   font-size: 85%;
   margin-bottom: 0.4rem;
 }
-.footnotes {
+.latex-body .footnotes {
   border-top: 1px solid hsl(0, 0%, 39%);
 }
 
 /* Center title and paragraph */
-.abstract,
-.abstract p {
+.latex-body .abstract,
+.latex-body .abstract p {
   text-align: center;
   margin-top: 0;
 }
-.abstract {
+.latex-body .abstract {
   margin: 2.25rem 0;
 }
-.abstract > h2 {
+.latex-body .abstract > h2 {
   font-size: 1rem;
   margin-bottom: -0.2rem;
 }
 
 /* Format the LaTeX symbol correctly (a higher up, e lower) */
-.latex span:nth-child(1) {
+.latex-body .latex span:nth-child(1) {
   text-transform: uppercase;
   font-size: 0.75em;
   vertical-align: 0.28em;
@@ -449,7 +449,7 @@ input.sidenote-toggle {
   line-height: 1ex;
 }
 
-.latex span:nth-child(2) {
+.latex-body .latex span:nth-child(2) {
   text-transform: uppercase;
   vertical-align: -0.5ex;
   margin-left: -0.1667em;
@@ -458,65 +458,65 @@ input.sidenote-toggle {
 }
 
 /* Heading typography */
-h1 {
+.latex-body h1 {
   font-size: 2.5rem;
   line-height: 3.25rem;
   margin-bottom: 1.625rem;
 }
 
-h2 {
+.latex-body h2 {
   font-size: 1.7rem;
   line-height: 2rem;
   margin-top: 3rem;
 }
 
-h3 {
+.latex-body h3 {
   font-size: 1.4rem;
   margin-top: 2.5rem;
 }
 
-h4 {
+.latex-body h4 {
   font-size: 1.2rem;
   margin-top: 2rem;
 }
 
-h5 {
+.latex-body h5 {
   font-size: 1rem;
   margin-top: 1.8rem;
 }
 
-h6 {
+.latex-body h6 {
   font-size: 1rem;
   font-style: italic;
   font-weight: normal;
   margin-top: 2.5rem;
 }
 
-h3,
-h4,
-h5,
-h6 {
+.latex-body h3,
+.latex-body h4,
+.latex-body h5,
+.latex-body h6 {
   line-height: 1.625rem;
 }
 
-h1 + h2 {
+.latex-body h1 + h2 {
   margin-top: 1.625rem;
 }
 
-h2 + h3,
-h3 + h4,
-h4 + h5 {
+.latex-body h2 + h3,
+.latex-body h3 + h4,
+.latex-body h4 + h5 {
   margin-top: 0.8rem;
 }
 
-h5 + h6 {
+.latex-body h5 + h6 {
   margin-top: -0.8rem;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+.latex-body h2,
+.latex-body h3,
+.latex-body h4,
+.latex-body h5,
+.latex-body h6 {
   margin-bottom: 0.8rem;
 }
